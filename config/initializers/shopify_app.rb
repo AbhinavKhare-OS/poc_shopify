@@ -3,4 +3,7 @@ ShopifyApp.configure do |config|
   config.secret = "5fa7f267db1e11824b2e20fb87eb1bc4"
   config.scope = "read_orders,"
   config.embedded_app = true
+  config.webhooks = [
+    {topic: "orders/create", address: "52.26.176.130", format: 'json'}
+  ]
 end
